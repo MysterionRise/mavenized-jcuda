@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="cuda-in-java">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jcurand-0.5.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jcusparse-0.5.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jcuda-0.5.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jcufft-0.5.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jcublas-0.5.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
