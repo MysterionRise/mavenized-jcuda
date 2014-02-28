@@ -1,2 +1,2 @@
-cuda-in-java
+My experiments with JCuda library
 ============

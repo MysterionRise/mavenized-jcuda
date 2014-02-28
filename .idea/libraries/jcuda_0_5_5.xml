@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jcuda-0.5.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/resources/jcuda-0.5.5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/src/main/resources/jcuda-0.5.5.jar!/doc" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
