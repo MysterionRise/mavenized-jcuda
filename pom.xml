@@ -7,33 +7,49 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jcuda.version>0.5.5</jcuda.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>jcublas</artifactId>
+            <version>${jcuda.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>jcuda</artifactId>
+            <version>${jcuda.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>jcufft</artifactId>
+            <version>${jcuda.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>jcurand</artifactId>
+            <version>${jcuda.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>jcusparse</artifactId>
+            <version>${jcuda.version}</version>
+        </dependency>
+    </dependencies>
+
+
+    <repositories>
+        <repository>
+            <id>jcuda.local</id>
+            <name>JCuda</name>
+            <url>file:${project.basedir}/repo</url>
+        </repository>
+    </repositories>
 
     <build>
         <defaultGoal>package</defaultGoal>
         <plugins>
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.6</version>
-                <executions>
-                    <execution>
-                        <id>copy-resources</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/target</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>lib/</directory>
-                                    <filtering>true</filtering>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -43,6 +59,9 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
+
+            <!--usage of exec plugin-->
+            <!--mvn exec:java -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
