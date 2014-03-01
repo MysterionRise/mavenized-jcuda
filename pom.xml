@@ -8,6 +8,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jcuda.version>0.5.5</jcuda.version>
+        <libJ.version>linux-x86_64</libJ.version>
     </properties>
 
     <dependencies>
@@ -40,57 +41,49 @@
         <dependency>
             <groupId>jcuda</groupId>
             <artifactId>libJCublas2</artifactId>
-            <version>0.5.5</version>
-            <classifier>linux-x86_64</classifier>
+            <version>${libJ.version}</version>
             <type>so</type>
         </dependency>
         <dependency>
             <groupId>jcuda</groupId>
             <artifactId>libJCublas</artifactId>
-            <version>0.5.5</version>
-            <classifier>linux-x86_64</classifier>
+            <version>${libJ.version}</version>
             <type>so</type>
         </dependency>
         <dependency>
             <groupId>jcuda</groupId>
             <artifactId>libJCudaDriver</artifactId>
-            <version>0.5.5</version>
-            <classifier>linux-x86_64</classifier>
+            <version>${libJ.version}</version>
             <type>so</type>
         </dependency>
         <dependency>
             <groupId>jcuda</groupId>
             <artifactId>libJCudaRuntime</artifactId>
-            <version>0.5.5</version>
-            <classifier>linux-x86_64</classifier>
+            <version>${libJ.version}</version>
             <type>so</type>
         </dependency>
         <dependency>
             <groupId>jcuda</groupId>
             <artifactId>libJCufft</artifactId>
-            <version>0.5.5</version>
-            <classifier>linux-x86_64</classifier>
+            <version>${libJ.version}</version>
             <type>so</type>
         </dependency>
         <dependency>
             <groupId>jcuda</groupId>
             <artifactId>libJCurand</artifactId>
-            <version>0.5.5</version>
-            <classifier>linux-x86_64</classifier>
+            <version>${libJ.version}</version>
             <type>so</type>
         </dependency>
         <dependency>
             <groupId>jcuda</groupId>
             <artifactId>libJCusparse</artifactId>
-            <version>0.5.5</version>
-            <classifier>linux-x86_64</classifier>
+            <version>${libJ.version}</version>
             <type>so</type>
         </dependency>
         <dependency>
             <groupId>jcuda</groupId>
             <artifactId>libJCusparse2</artifactId>
-            <version>0.5.5</version>
-            <classifier>linux-x86_64</classifier>
+            <version>${libJ.version}</version>
             <type>so</type>
         </dependency>
 
@@ -118,8 +111,25 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.8</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <!--usage of exec plugin-->
-            <!--mvn exec:java -->
+            <!--mvn exec:exec -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -127,16 +137,21 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>java</goal>
+                            <goal>exec</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
+                    <executable>java</executable>
                     <mainClass>org.mystic.cuda.JCudaRuntimeTest</mainClass>
-                    <!--<arguments>-->
-                    <!--<argument>foo</argument>-->
-                    <!--<argument>bar</argument>-->
-                    <!--</arguments>-->
+                    <arguments>
+                        <argument>-Djava.library.path=target/lib</argument>
+                        <argument>-classpath</argument>
+                        <!-- automatically creates the classpath using all project dependencies,
+                             also adding the project build directory -->
+                        <classpath/>
+                        <argument>org.mystic.cuda.JCudaRuntimeTest</argument>
+                    </arguments>
                 </configuration>
             </plugin>
         </plugins>
