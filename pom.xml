@@ -11,6 +11,7 @@
     </properties>
 
     <dependencies>
+        <!--JCuda libs-->
         <dependency>
             <groupId>jcuda</groupId>
             <artifactId>jcublas</artifactId>
@@ -36,6 +37,63 @@
             <artifactId>jcusparse</artifactId>
             <version>${jcuda.version}</version>
         </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>libJCublas2</artifactId>
+            <version>0.5.5</version>
+            <classifier>linux-x86_64</classifier>
+            <type>so</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>libJCublas</artifactId>
+            <version>0.5.5</version>
+            <classifier>linux-x86_64</classifier>
+            <type>so</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>libJCudaDriver</artifactId>
+            <version>0.5.5</version>
+            <classifier>linux-x86_64</classifier>
+            <type>so</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>libJCudaRuntime</artifactId>
+            <version>0.5.5</version>
+            <classifier>linux-x86_64</classifier>
+            <type>so</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>libJCufft</artifactId>
+            <version>0.5.5</version>
+            <classifier>linux-x86_64</classifier>
+            <type>so</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>libJCurand</artifactId>
+            <version>0.5.5</version>
+            <classifier>linux-x86_64</classifier>
+            <type>so</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>libJCusparse</artifactId>
+            <version>0.5.5</version>
+            <classifier>linux-x86_64</classifier>
+            <type>so</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>libJCusparse2</artifactId>
+            <version>0.5.5</version>
+            <classifier>linux-x86_64</classifier>
+            <type>so</type>
+        </dependency>
+
     </dependencies>
 
 

@@ -1,7 +1,7 @@
 package org.mystic.cuda;
 
-import jcuda.*;
-import jcuda.runtime.*;
+import jcuda.Pointer;
+import jcuda.runtime.JCuda;
 
 public class JCudaRuntimeTest {
     public static void main(String args[]) {
