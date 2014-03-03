@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>jcuda</groupId>
+  <artifactId>JCudaDriver</artifactId>
+  <versioning>
+    <release>windows-x86</release>
+    <versions>
+      <version>windows-x86</version>
+      <version>windows-x86_64</version>
+    </versions>
+    <lastUpdated>20140303074814</lastUpdated>
+  </versioning>
+</metadata>

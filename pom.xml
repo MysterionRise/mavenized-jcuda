@@ -9,10 +9,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jcuda.version>0.5.5</jcuda.version>
         <libJ.version>linux-x86_64</libJ.version>
+        <dllJ.version>windows-x86</dllJ.version>
     </properties>
 
     <dependencies>
-        <!--JCuda libs-->
+        <!--JCuda Java libs-->
         <dependency>
             <groupId>jcuda</groupId>
             <artifactId>jcublas</artifactId>
@@ -38,6 +39,7 @@
             <artifactId>jcusparse</artifactId>
             <version>${jcuda.version}</version>
         </dependency>
+        <!--JCuda native so libs-->
         <dependency>
             <groupId>jcuda</groupId>
             <artifactId>libJCublas2</artifactId>
@@ -85,6 +87,55 @@
             <artifactId>libJCusparse2</artifactId>
             <version>${libJ.version}</version>
             <type>so</type>
+        </dependency>
+        <!--JCuda native dll libs-->
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>JCublas2</artifactId>
+            <version>${dllJ.version}</version>
+            <type>dll</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>JCublas</artifactId>
+            <version>${dllJ.version}</version>
+            <type>dll</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>JCudaDriver</artifactId>
+            <version>${dllJ.version}</version>
+            <type>dll</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>JCudaRuntime</artifactId>
+            <version>${dllJ.version}</version>
+            <type>dll</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>JCufft</artifactId>
+            <version>${dllJ.version}</version>
+            <type>dll</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>JCurand</artifactId>
+            <version>${dllJ.version}</version>
+            <type>dll</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>JCusparse</artifactId>
+            <version>${dllJ.version}</version>
+            <type>dll</type>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>JCusparse2</artifactId>
+            <version>${dllJ.version}</version>
+            <type>dll</type>
         </dependency>
 
     </dependencies>

@@ -6,7 +6,8 @@
     <release>linux-x86_64</release>
     <versions>
       <version>linux-x86_64</version>
+      <version>linux-x86</version>
     </versions>
-    <lastUpdated>20140301113440</lastUpdated>
+    <lastUpdated>20140303074807</lastUpdated>
   </versioning>
 </metadata>
