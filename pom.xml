@@ -263,6 +263,17 @@
             </dependencies>
 
         </profile>
+
+        <!--There isn't any precompiled libs for now-->
+        <profile>
+            <id>mac-x86_64</id>
+            <activation>
+                <os>
+                    <family>mac</family>
+                    <arch>x86_64</arch>
+                </os>
+            </activation>
+        </profile>
     </profiles>
 
     <properties>
