@@ -1,3 +1,4 @@
+# Windows script for adding native libs. Should be used, when new versions of native libs will be released
 # install windows-x86_64 libs
 mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCublas -Dversion=windows-x86_64 -Dfile=JCublas-windows-x86_64.dll -Durl=file://.
 mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCublas2 -Dversion=windows-x86_64 -Dfile=JCublas2-windows-x86_64.dll -Durl=file://.

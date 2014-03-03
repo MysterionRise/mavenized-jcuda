@@ -5,6 +5,109 @@
     <artifactId>cuda-in-java</artifactId>
     <version>0.0.1</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jcuda.version>0.5.5</jcuda.version>
+    </properties>
+
+    <dependencies>
+        <!--JCuda Java libs-->
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>jcublas</artifactId>
+            <version>${jcuda.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>jcuda</artifactId>
+            <version>${jcuda.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>jcufft</artifactId>
+            <version>${jcuda.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>jcurand</artifactId>
+            <version>${jcuda.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>jcusparse</artifactId>
+            <version>${jcuda.version}</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>jcuda.local</id>
+            <name>JCuda</name>
+            <url>file:${project.basedir}/repo</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <defaultGoal>package</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.8</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--usage of exec plugin-->
+            <!--mvn exec:exec -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <executable>java</executable>
+                    <mainClass>org.mystic.cuda.JCudaRuntimeTest</mainClass>
+                    <arguments>
+                        <argument>-Djava.library.path=target/lib</argument>
+                        <argument>-classpath</argument>
+                        <!-- automatically creates the classpath using all project dependencies,
+                             also adding the project build directory -->
+                        <classpath/>
+                        <!--Replace with your class reference if any -->
+                        <argument>org.mystic.cuda.JCudaRuntimeTest</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!--Set of auto detected profiles for different OS family/architecture-->
     <profiles>
         <profile>
             <id>windows-x86_64</id>
@@ -264,7 +367,7 @@
 
         </profile>
 
-        <!--There isn't any precompiled libs for now-->
+        <!--There isn't any precompiled libs for now. Leave it as is for later usage-->
         <profile>
             <id>mac-x86_64</id>
             <activation>
@@ -275,107 +378,5 @@
             </activation>
         </profile>
     </profiles>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jcuda.version>0.5.5</jcuda.version>
-    </properties>
-
-    <dependencies>
-        <!--JCuda Java libs-->
-        <dependency>
-            <groupId>jcuda</groupId>
-            <artifactId>jcublas</artifactId>
-            <version>${jcuda.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>jcuda</groupId>
-            <artifactId>jcuda</artifactId>
-            <version>${jcuda.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>jcuda</groupId>
-            <artifactId>jcufft</artifactId>
-            <version>${jcuda.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>jcuda</groupId>
-            <artifactId>jcurand</artifactId>
-            <version>${jcuda.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>jcuda</groupId>
-            <artifactId>jcusparse</artifactId>
-            <version>${jcuda.version}</version>
-        </dependency>
-    </dependencies>
-
-    <repositories>
-        <repository>
-            <id>jcuda.local</id>
-            <name>JCuda</name>
-            <url>file:${project.basedir}/repo</url>
-        </repository>
-    </repositories>
-
-    <build>
-        <defaultGoal>package</defaultGoal>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.8</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <!--usage of exec plugin-->
-            <!--mvn exec:exec -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <executable>java</executable>
-                    <mainClass>org.mystic.cuda.JCudaRuntimeTest</mainClass>
-                    <arguments>
-                        <argument>-Djava.library.path=target/lib</argument>
-                        <argument>-classpath</argument>
-                        <!-- automatically creates the classpath using all project dependencies,
-                             also adding the project build directory -->
-                        <classpath/>
-                        <!--Replace with your class reference if any -->
-                        <argument>org.mystic.cuda.JCudaRuntimeTest</argument>
-                    </arguments>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

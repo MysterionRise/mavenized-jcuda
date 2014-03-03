@@ -1,10 +1,15 @@
-JCuda super parent project
+Mavenized JCuda
 ============
 
-Feel free to fork it and make pull requests
+Features:
+
+* Local Maven repo with 4 sets of native libs
+* Auto detection of OS family name and it's architecture (it's allow, to choose needed dependencies automatically)
+* Running any main class, that contained JCuda code easily
+
+How to guide
 
 * You need to install Cuda 5.5 for your platform [here] [1]
-* Select proper version for your platform in _pom.xml_ (_libJ.version_ for Linux env, and _dllJ.version_ for Windows env)
 * Call _mvn clean package_ to build project
 * Call _mvn exec:exec_ to run main class with "Hello, JCuda" sample :)
 * ???
