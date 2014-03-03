@@ -8,7 +8,7 @@ Feel free to fork it and make pull requests
 * Call _mvn clean package_ to build project
 * Call _mvn exec:exec_ to run main class with "Hello, JCuda" sample :)
 * ???
-* Fork! Commit! Create bugs!
+* Fork! Commit! Report bugs!
 
 
 [1]: https://developer.nvidia.com/cuda-downloads       "here"
