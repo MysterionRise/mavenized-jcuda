@@ -310,7 +310,6 @@
         </dependency>
     </dependencies>
 
-
     <repositories>
         <repository>
             <id>jcuda.local</id>
@@ -371,6 +370,7 @@
                         <!-- automatically creates the classpath using all project dependencies,
                              also adding the project build directory -->
                         <classpath/>
+                        <!--Replace with your class reference if any -->
                         <argument>org.mystic.cuda.JCudaRuntimeTest</argument>
                     </arguments>
                 </configuration>
