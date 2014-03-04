@@ -92,7 +92,6 @@
                 </executions>
                 <configuration>
                     <executable>java</executable>
-                    <mainClass>org.mystic.cuda.JCudaRuntimeTest</mainClass>
                     <arguments>
                         <argument>-Djava.library.path=target/lib</argument>
                         <argument>-classpath</argument>
