@@ -15,12 +15,6 @@ How to guide
 * ???
 * Fork! Commit! Report bugs!
 
-Support me on Gittip
-
-```html
-<script data-gittip-username="MysterionRise"
-        data-gittip-widget="button"
-        src="//gttp.co/v1.js"></script>
-```
+Support me on Gittip - https://www.gittip.com/MysterionRise/
 
 [1]: https://developer.nvidia.com/cuda-downloads       "here"
