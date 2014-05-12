@@ -3,10 +3,12 @@
   <groupId>jcuda</groupId>
   <artifactId>jcublas</artifactId>
   <versioning>
-    <release>0.5.5</release>
+    <release>0.5.0</release>
     <versions>
       <version>0.5.5</version>
+      <version>0.6.0RC</version>
+      <version>0.5.0</version>
     </versions>
-    <lastUpdated>20140301102404</lastUpdated>
+    <lastUpdated>20140512130038</lastUpdated>
   </versioning>
 </metadata>
