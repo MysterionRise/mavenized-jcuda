@@ -1,16 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.mystic</groupId>
     <artifactId>mavenized-jcuda</artifactId>
     <version>0.1</version>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Set needed version of JCuda here -->
-        <jcuda.version>0.5.5</jcuda.version>
+        <jcuda.version>0.6.0</jcuda.version>
     </properties>
-
     <dependencies>
         <!--JCuda Java libs-->
         <dependency>
@@ -39,7 +38,6 @@
             <version>${jcuda.version}</version>
         </dependency>
     </dependencies>
-
     <repositories>
         <repository>
             <id>jcuda.local</id>
@@ -47,7 +45,6 @@
             <url>file:${project.basedir}/repo</url>
         </repository>
     </repositories>
-
     <build>
         <defaultGoal>package</defaultGoal>
         <plugins>
@@ -60,7 +57,6 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -78,7 +74,6 @@
                     </execution>
                 </executions>
             </plugin>
-
             <!--usage of exec plugin-->
             <!--mvn exec:exec -->
             <plugin>
@@ -98,7 +93,7 @@
                         <argument>-Djava.library.path=target/lib</argument>
                         <argument>-classpath</argument>
                         <!-- automatically creates the classpath using all project dependencies,
-                             also adding the project build directory -->
+                                   also adding the project build directory -->
                         <classpath/>
                         <!--Replace with your class reference if any -->
                         <argument>org.mystic.cuda.JCudaRuntimeTest</argument>
@@ -107,10 +102,11 @@
             </plugin>
         </plugins>
     </build>
-
     <!--Set of auto detected profiles for different OS family/architecture-->
     <profiles>
-        <!--New profiles for JCuda version 0.6.0RC and higher -->
+        <!--New profile for JCuda version 0.6.0RC and higher
+            will work automatically, thanks to auto activation
+        -->
         <profile>
             <id>windows-x86_64</id>
             <activation>
@@ -173,16 +169,11 @@
                     <classifier>${dllJ.version}</classifier>
                     <type>dll</type>
                 </dependency>
-                <dependency>
-                    <groupId>jcuda</groupId>
-                    <artifactId>JCusparse2</artifactId>
-                    <version>${jcuda.version}</version>
-                    <classifier>${dllJ.version}</classifier>
-                    <type>dll</type>
-                </dependency>
             </dependencies>
         </profile>
-
+        <!--New profile for JCuda version 0.6.0RC and higher
+       will work automatically, thanks to auto activation
+   -->
         <profile>
             <id>windows-x86</id>
             <activation>
@@ -245,30 +236,14 @@
                     <classifier>${dllJ.version}</classifier>
                     <type>dll</type>
                 </dependency>
-                <dependency>
-                    <groupId>jcuda</groupId>
-                    <artifactId>JCusparse2</artifactId>
-                    <version>${jcuda.version}</version>
-                    <classifier>${dllJ.version}</classifier>
-                    <type>dll</type>
-                </dependency>
             </dependencies>
         </profile>
-
-
-        <!--Out of date profiles for JCuda versions 0.5.0, 0.5.5-->
+        <!--Out of date profile for JCuda versions 0.5.0, 0.5.5
+        Won't set up automatically, since newest version is always a more important
+        Thanks to Maven bug - http://jira.codehaus.org/browse/MNG-4565
+        -->
         <profile>
             <id>windows-x86_64_old</id>
-            <activation>
-                <property>
-                    <name>jcuda.version</name>
-                    <value>[0.5.0,0.5.5]</value>
-                </property>
-                <os>
-                    <family>windows</family>
-                    <arch>amd64</arch>
-                </os>
-            </activation>
             <properties>
                 <dllJ.version>windows-x86_64</dllJ.version>
             </properties>
@@ -332,19 +307,12 @@
                 </dependency>
             </dependencies>
         </profile>
-
+        <!--Out of date profile for JCuda versions 0.5.0, 0.5.5
+        Won't set up automatically, since newest version is always a more important
+        Thanks to Maven bug - http://jira.codehaus.org/browse/MNG-4565
+        -->
         <profile>
             <id>windows-x86_old</id>
-            <activation>
-                <property>
-                    <name>jcuda.version</name>
-                    <value>[0.5.0,0.5.5]</value>
-                </property>
-                <os>
-                    <family>windows</family>
-                    <arch>x86</arch>
-                </os>
-            </activation>
             <properties>
                 <dllJ.version>windows-x86</dllJ.version>
             </properties>
@@ -408,14 +376,12 @@
                 </dependency>
             </dependencies>
         </profile>
-
+        <!--Out of date profile for JCuda versions 0.5.0, 0.5.5
+        Still work automatically, until newest versions of this arch will be available
+        -->
         <profile>
             <id>linux-x86_64_old</id>
             <activation>
-                <property>
-                    <name>jcuda.version</name>
-                    <value>[0.5.0,0.5.5]</value>
-                </property>
                 <os>
                     <family>unix</family>
                     <arch>amd64</arch>
@@ -483,16 +449,13 @@
                     <type>so</type>
                 </dependency>
             </dependencies>
-
         </profile>
-
+        <!--Out of date profile for JCuda versions 0.5.0, 0.5.5
+        Still work automatically, until newest versions of this arch will be available
+        -->
         <profile>
             <id>linux-x86_old</id>
             <activation>
-                <property>
-                    <name>jcuda.version</name>
-                    <value>[0.5.0,0.5.5]</value>
-                </property>
                 <os>
                     <family>unix</family>
                     <arch>i386</arch>
@@ -561,7 +524,6 @@
                 </dependency>
             </dependencies>
         </profile>
-
         <!--There isn't any precompiled libs for now. Leave it as is for later usage-->
         <profile>
             <id>mac-x86_64</id>
@@ -573,5 +535,4 @@
             </activation>
         </profile>
     </profiles>
-
 </project>
