@@ -110,6 +110,7 @@
 
     <!--Set of auto detected profiles for different OS family/architecture-->
     <profiles>
+        <!--New profiles for JCuda version 0.6.0RC and higher -->
         <profile>
             <id>windows-x86_64</id>
             <activation>
@@ -254,9 +255,167 @@
             </dependencies>
         </profile>
 
+
+        <!--Out of date profiles for JCuda versions 0.5.0, 0.5.5-->
         <profile>
-            <id>linux-x86_64</id>
+            <id>windows-x86_64_old</id>
             <activation>
+                <property>
+                    <name>jcuda.version</name>
+                    <value>[0.5.0,0.5.5]</value>
+                </property>
+                <os>
+                    <family>windows</family>
+                    <arch>amd64</arch>
+                </os>
+            </activation>
+            <properties>
+                <dllJ.version>windows-x86_64</dllJ.version>
+            </properties>
+            <dependencies>
+                <!--JCuda native dll libs-->
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCublas2</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCublas</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCudaDriver</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCudaRuntime</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCufft</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCurand</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCusparse</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCusparse2</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
+            <id>windows-x86_old</id>
+            <activation>
+                <property>
+                    <name>jcuda.version</name>
+                    <value>[0.5.0,0.5.5]</value>
+                </property>
+                <os>
+                    <family>windows</family>
+                    <arch>x86</arch>
+                </os>
+            </activation>
+            <properties>
+                <dllJ.version>windows-x86</dllJ.version>
+            </properties>
+            <dependencies>
+                <!--JCuda native dll libs-->
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCublas2</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCublas</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCudaDriver</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCudaRuntime</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCufft</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCurand</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCusparse</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCusparse2</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
+            <id>linux-x86_64_old</id>
+            <activation>
+                <property>
+                    <name>jcuda.version</name>
+                    <value>[0.5.0,0.5.5]</value>
+                </property>
                 <os>
                     <family>unix</family>
                     <arch>amd64</arch>
@@ -328,8 +487,12 @@
         </profile>
 
         <profile>
-            <id>linux-x86</id>
+            <id>linux-x86_old</id>
             <activation>
+                <property>
+                    <name>jcuda.version</name>
+                    <value>[0.5.0,0.5.5]</value>
+                </property>
                 <os>
                     <family>unix</family>
                     <arch>i386</arch>
@@ -397,7 +560,6 @@
                     <type>so</type>
                 </dependency>
             </dependencies>
-
         </profile>
 
         <!--There isn't any precompiled libs for now. Leave it as is for later usage-->

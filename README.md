@@ -3,7 +3,7 @@ Mavenized JCuda
 
 Features:
 
-* Currently support JCuda 0.5.0, 0.5.5, 0.6.0RC (windows-i386 only)
+* Currently support JCuda 0.5.0, 0.5.5, 0.6.0RC (windows-i386, windows-x86_64 only), 0.6.0 (windows-i386, windows-x86_64 only)
 * Local Maven repo with 4 sets of native libs (windows-i386, windows-x86_64, linux-i386, linux-x86_64)
 * Auto detection of OS family name and it's architecture (it's  choose needed dependencies automatically)
 * Running any main class, that contained JCuda code easily (without classpath hell, just run Maven goal)
