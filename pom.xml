@@ -104,7 +104,8 @@
     </build>
     <!--Set of auto detected profiles for different OS family/architecture-->
     <profiles>
-        <!--New profile for JCuda version 0.6.0RC and higher
+        <!--New profile for JCuda version 0.6.0RC for Win-x86_64 and higher
+
             will work automatically, thanks to auto activation
         -->
         <profile>
@@ -171,7 +172,8 @@
                 </dependency>
             </dependencies>
         </profile>
-        <!--New profile for JCuda version 0.6.0RC and higher
+        <!--New profile for JCuda version 0.6.0RC for Win-x86 and higher
+
        will work automatically, thanks to auto activation
    -->
         <profile>
@@ -238,9 +240,150 @@
                 </dependency>
             </dependencies>
         </profile>
+        <!--New profile for JCuda version 0.6.0 for Linux-x86_64
+
+     will work automatically, thanks to auto activation
+ -->
+        <profile>
+            <id>linux-x86_64</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                    <arch>amd64</arch>
+                </os>
+            </activation>
+            <properties>
+                <libJ.version>linux-x86_64</libJ.version>
+            </properties>
+            <!--JCuda native so libs-->
+            <dependencies>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCublas2</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCublas</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCudaDriver</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCudaRuntime</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCufft</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCurand</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCusparse</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <!--New profile for JCuda version 0.6.0 for Mac x86_64
+
+       will work automatically, thanks to auto activation
+   -->
+        <profile>
+            <id>mac-x86_64</id>
+            <activation>
+                <os>
+                    <family>mac</family>
+                    <arch>x86_64</arch>
+                </os>
+            </activation>
+            <properties>
+                <dylibJ.version>mac-x86_64</dylibJ.version>
+            </properties>
+            <!--JCuda native dylib libs-->
+            <dependencies>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCublas2</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dylibJ.version}</classifier>
+                    <type>dylib</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCublas</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dylibJ.version}</classifier>
+                    <type>dylib</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCudaDriver</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dylibJ.version}</classifier>
+                    <type>dylib</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCudaRuntime</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dylibJ.version}</classifier>
+                    <type>dylib</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCufft</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dylibJ.version}</classifier>
+                    <type>dylib</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCurand</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dylibJ.version}</classifier>
+                    <type>dylib</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCusparse</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dylibJ.version}</classifier>
+                    <type>dylib</type>
+                </dependency>
+            </dependencies>
+        </profile>
+
+
         <!--Out of date profile for JCuda versions 0.5.0, 0.5.5
         Won't set up automatically, since newest version is always a more important
         Thanks to Maven bug - http://jira.codehaus.org/browse/MNG-4565
+
+        UPD. It was solved by me, but we need to use Maven 3.2.2 that will come soon, to avoid that problem
         -->
         <profile>
             <id>windows-x86_64_old</id>
@@ -310,6 +453,8 @@
         <!--Out of date profile for JCuda versions 0.5.0, 0.5.5
         Won't set up automatically, since newest version is always a more important
         Thanks to Maven bug - http://jira.codehaus.org/browse/MNG-4565
+
+        UPD. It was solved by me, but we need to use Maven 3.2.2 that will come soon, to avoid that problem
         -->
         <profile>
             <id>windows-x86_old</id>
@@ -377,16 +522,13 @@
             </dependencies>
         </profile>
         <!--Out of date profile for JCuda versions 0.5.0, 0.5.5
-        Still work automatically, until newest versions of this arch will be available
+        Won't set up automatically, since newest version is always a more important
+        Thanks to Maven bug - http://jira.codehaus.org/browse/MNG-4565
+
+        UPD. It was solved by me, but we need to use Maven 3.2.2 that will come soon, to avoid that problem
         -->
         <profile>
             <id>linux-x86_64_old</id>
-            <activation>
-                <os>
-                    <family>unix</family>
-                    <arch>amd64</arch>
-                </os>
-            </activation>
             <properties>
                 <libJ.version>linux-x86_64</libJ.version>
             </properties>
@@ -450,7 +592,8 @@
                 </dependency>
             </dependencies>
         </profile>
-        <!--Out of date profile for JCuda versions 0.5.0, 0.5.5
+        <!--Out of date profile for JCuda versions 0.5.0, 0.5.5 for Linux-x86
+
         Still work automatically, until newest versions of this arch will be available
         -->
         <profile>
@@ -523,16 +666,6 @@
                     <type>so</type>
                 </dependency>
             </dependencies>
-        </profile>
-        <!--There isn't any precompiled libs for now. Leave it as is for later usage-->
-        <profile>
-            <id>mac-x86_64</id>
-            <activation>
-                <os>
-                    <family>mac</family>
-                    <arch>x86_64</arch>
-                </os>
-            </activation>
         </profile>
     </profiles>
 </project>
