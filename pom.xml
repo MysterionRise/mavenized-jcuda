@@ -245,7 +245,7 @@
      will work automatically, thanks to auto activation
  -->
         <profile>
-            <id>linux-x86_64</id>
+            <id>unix-x86_64</id>
             <activation>
                 <os>
                     <family>unix</family>
@@ -528,7 +528,7 @@
         UPD. It was solved by me, but we need to use Maven 3.2.2 that will come soon, to avoid that problem
         -->
         <profile>
-            <id>linux-x86_64_old</id>
+            <id>unix-x86_64_old</id>
             <properties>
                 <libJ.version>linux-x86_64</libJ.version>
             </properties>
@@ -597,7 +597,7 @@
         Still work automatically, until newest versions of this arch will be available
         -->
         <profile>
-            <id>linux-x86_old</id>
+            <id>unix-x86_old</id>
             <activation>
                 <os>
                     <family>unix</family>
