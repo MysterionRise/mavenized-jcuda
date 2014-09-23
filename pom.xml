@@ -8,7 +8,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Set needed version of JCuda here -->
-        <jcuda.version>0.6.0</jcuda.version>
+        <jcuda.version>0.6.5</jcuda.version>
     </properties>
     <dependencies>
         <!--JCuda Java libs-->
@@ -240,7 +240,7 @@
                 </dependency>
             </dependencies>
         </profile>
-        <!--New profile for JCuda version 0.6.0 for Linux-x86_64
+        <!--New profile for JCuda version 0.6.0 for Linux-x86_64 and higher
 
      will work automatically, thanks to auto activation
  -->
