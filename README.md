@@ -23,8 +23,5 @@ How to run JCuda code:
 * ???
 * Fork! Write your own JCuda code! Run! Report bugs! Support!
 
-[Support me!]
-
 [1]: https://developer.nvidia.com/cuda-downloads "here"
 [2]: http://maven.apache.org/guides/introduction/introduction-to-profiles.html "here"
-[Support me!]: https://www.gittip.com/MysterionRise/
