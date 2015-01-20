@@ -90,7 +90,7 @@
                 <configuration>
                     <executable>java</executable>
                     <arguments>
-                        <argument>-Djava.library.path=target/lib</argument>
+                        <argument>-Djava.library.path=${project.build.directory}/lib</argument>
                         <argument>-classpath</argument>
                         <!-- automatically creates the classpath using all project dependencies,
                                    also adding the project build directory -->
