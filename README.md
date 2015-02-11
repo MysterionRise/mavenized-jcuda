@@ -18,8 +18,9 @@ How to run JCuda code:
         For more info about **Maven** profiles take a look [here] [2]
     * If you run **JCuda 0.6.0** and higher on **Unix x86_64** platform - everything is ok
     * If you run **JCUda 0.6.0** and higher on **Mac x86_64** - everything is ok
-* Call _mvn clean package_ to build project
+* Call _mvn clean package_ to build project (it will copy all dependencies to _target/lib_ dir)
 * Call _mvn exec:exec_ to run main class (org.mystic.cuda.JCudaRuntimeTest) with "Hello, JCuda" sample :)
+* If you want to run code directly from your IDE without Maven - you could do it via Run command in most of the IDE (Intellij IDEA, Eclipse, Netbeans, etc.) All you need to do - is to add property _-Djava.library.path=target/lib_ (more information is on Stackoverflow - http://stackoverflow.com/q/28333226/2663985)
 * ???
 * Fork! Write your own JCuda code! Run! Report bugs! Support!
 
