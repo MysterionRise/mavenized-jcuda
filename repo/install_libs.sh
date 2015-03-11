@@ -74,12 +74,12 @@ version=0.6.5
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCufft -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJCufft-linux-x86_64.so -Durl=file://.
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCurand -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJCurand-linux-x86_64.so -Durl=file://.
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCusparse -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJCusparse-linux-x86_64.so -Durl=file://.
-# install mac-x86_64 0.6.0 libs
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCublas -Dversion=$version -Dclassifier=mac-x86_64 -Dfile=libJCublas-apple-x86_64.dylib -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCublas2 -Dversion=$version -Dclassifier=mac-x86_64 -Dfile=libJCublas2-apple-x86_64.dylib -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCudaDriver -Dversion=$version -Dclassifier=mac-x86_64 -Dfile=libJCudaDriver-apple-x86_64.dylib -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCudaRuntime -Dversion=$version -Dclassifier=mac-x86_64 -Dfile=libJCudaRuntime-apple-x86_64.dylib -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCufft -Dversion=$version -Dclassifier=mac-x86_64 -Dfile=libJCufft-apple-x86_64.dylib -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCurand -Dversion=$version -Dclassifier=mac-x86_64 -Dfile=libJCurand-apple-x86_64.dylib -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCusparse -Dversion=$version -Dclassifier=mac-x86_64 -Dfile=libJCusparse-apple-x86_64.dylib -Durl=file://.
+# install apple-x86_64 0.6.0 libs
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCublas -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCublas-apple-x86_64.dylib -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCublas2 -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCublas2-apple-x86_64.dylib -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCudaDriver -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCudaDriver-apple-x86_64.dylib -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCudaRuntime -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCudaRuntime-apple-x86_64.dylib -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCufft -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCufft-apple-x86_64.dylib -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCurand -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCurand-apple-x86_64.dylib -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCusparse -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCusparse-apple-x86_64.dylib -Durl=file://.
 

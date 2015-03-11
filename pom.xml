@@ -314,7 +314,7 @@
        will work automatically, thanks to auto activation
    -->
         <profile>
-            <id>mac-x86_64</id>
+            <id>apple-x86_64</id>
             <activation>
                 <os>
                     <family>mac</family>
@@ -322,7 +322,7 @@
                 </os>
             </activation>
             <properties>
-                <dylibJ.version>mac-x86_64</dylibJ.version>
+                <dylibJ.version>apple-x86_64</dylibJ.version>
             </properties>
             <!--JCuda native dylib libs-->
             <dependencies>
