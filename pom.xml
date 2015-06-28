@@ -175,6 +175,13 @@
                     <classifier>${dllJ.version}</classifier>
                     <type>dll</type>
                 </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>JCusolver</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dllJ.version}</classifier>
+                    <type>dll</type>
+                </dependency>
             </dependencies>
         </profile>
         <!--New profile for JCuda version 0.6.0RC for Win-x86 and higher
@@ -311,6 +318,13 @@
                     <classifier>${libJ.version}</classifier>
                     <type>so</type>
                 </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCusolver</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
             </dependencies>
         </profile>
 
@@ -376,6 +390,13 @@
                 <dependency>
                     <groupId>jcuda</groupId>
                     <artifactId>libJCusparse</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${dylibJ.version}</classifier>
+                    <type>dylib</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCusparse2</artifactId>
                     <version>${jcuda.version}</version>
                     <classifier>${dylibJ.version}</classifier>
                     <type>dylib</type>
