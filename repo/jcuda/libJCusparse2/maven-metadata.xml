@@ -3,11 +3,12 @@
   <groupId>jcuda</groupId>
   <artifactId>libJCusparse2</artifactId>
   <versioning>
-    <release>0.5.0</release>
+    <release>0.7.0a</release>
     <versions>
       <version>0.5.5</version>
       <version>0.5.0</version>
+      <version>0.7.0a</version>
     </versions>
-    <lastUpdated>20140512130134</lastUpdated>
+    <lastUpdated>20150628120939</lastUpdated>
   </versioning>
 </metadata>

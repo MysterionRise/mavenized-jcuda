@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>jcuda</groupId>
+  <artifactId>libJCusolver</artifactId>
+  <versioning>
+    <release>0.7.0a</release>
+    <versions>
+      <version>0.7.0a</version>
+    </versions>
+    <lastUpdated>20150628120438</lastUpdated>
+  </versioning>
+</metadata>
