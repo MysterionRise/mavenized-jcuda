@@ -24,7 +24,7 @@ How to run JCuda code:
     * If you run **JCuda 0.6.0** and higher on **Unix x86_64** platform - everything is ok
     * If you run **JCUda 0.6.0** and higher on **Mac x86_64** - everything is ok
     
-    **OBSOLETE** 
+    **OBSOLETE** [end of obsolete part]
        
     
 * Call _mvn clean package_ to build project (it will copy all dependencies to _target/lib_ dir)
