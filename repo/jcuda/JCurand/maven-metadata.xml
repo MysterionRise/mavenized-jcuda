@@ -3,7 +3,7 @@
   <groupId>jcuda</groupId>
   <artifactId>JCurand</artifactId>
   <versioning>
-    <release>0.7.0a</release>
+    <release>0.7.5</release>
     <versions>
       <version>0.5.5</version>
       <version>0.6.0RC</version>
@@ -11,7 +11,8 @@
       <version>0.6.0</version>
       <version>0.6.5</version>
       <version>0.7.0a</version>
+      <version>0.7.5</version>
     </versions>
-    <lastUpdated>20150628120308</lastUpdated>
+    <lastUpdated>20150917175434</lastUpdated>
   </versioning>
 </metadata>

@@ -8,7 +8,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Set needed version of JCuda here -->
-        <jcuda.version>0.7.0a</jcuda.version>
+        <jcuda.version>0.7.5</jcuda.version>
     </properties>
     <dependencies>
         <!--JCuda Java libs-->
