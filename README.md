@@ -31,9 +31,10 @@ How to run JCuda code:
 	* Users who configure a repository manager like Nexus should add option _-Dmaven.repo.local=repo_ to the _mvn clean package_ command.
 * Call _mvn exec:exec_ to run main class (org.mystic.cuda.JCudaRuntimeTest) with "Hello, JCuda" sample :)
 	* Users who configure a repository manager like Nexus should add option _-Dmaven.repo.local=repo_ to the _mvn exec:exec_ command.
-* If you want to run code directly from your IDE without **Maven** - you could do it via _Run_ command in most of the IDE (Intellij IDEA, Eclipse, Netbeans, etc.) All you need to do - is to add property _-Djava.library.path=target/lib_ (more information is on Stackoverflow - http://stackoverflow.com/q/28333226/2663985)
+* If you want to run code directly from your IDE without **Maven** - you could do it via _Run_ command in most of the IDE (Intellij IDEA, Eclipse, Netbeans, etc.) All you need to do - is to add property _-Djava.library.path=target/lib_ (more information is on [Stackoverflow] [3])
 * ???
 * Fork! Write your own JCuda code! Run! Report bugs! Support!
 
 [1]: https://developer.nvidia.com/cuda-downloads "here"
 [2]: http://maven.apache.org/guides/introduction/introduction-to-profiles.html "here"
+[3]: http://stackoverflow.com/q/28333226/2663985
