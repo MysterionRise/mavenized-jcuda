@@ -3,14 +3,15 @@
   <groupId>jcuda</groupId>
   <artifactId>libJCublas</artifactId>
   <versioning>
-    <release>0.7.0a</release>
+    <release>0.7.5</release>
     <versions>
       <version>0.5.5</version>
       <version>0.5.0</version>
       <version>0.6.0</version>
       <version>0.6.5</version>
       <version>0.7.0a</version>
+      <version>0.7.5</version>
     </versions>
-    <lastUpdated>20150628120930</lastUpdated>
+    <lastUpdated>20150929183519</lastUpdated>
   </versioning>
 </metadata>

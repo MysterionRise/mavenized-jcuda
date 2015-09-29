@@ -60,14 +60,14 @@ version=0.7.5
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCurand -Dversion=$version -Dclassifier=windows-x86 -Dfile=JCurand-windows-x86.dll -Durl=file://.
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCusparse -Dversion=$version -Dclassifier=windows-x86 -Dfile=JCusparse-windows-x86.dll -Durl=file://.
 # # install windows-x86_64 0.6.0 libs
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCublas -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCublas-windows-x86_64.dll -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCublas2 -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCublas2-windows-x86_64.dll -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCudaDriver -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCudaDriver-windows-x86_64.dll -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCudaRuntime -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCudaRuntime-windows-x86_64.dll -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCufft -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCufft-windows-x86_64.dll -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCurand -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCurand-windows-x86_64.dll -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCusparse -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCusparse-windows-x86_64.dll -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCusolver -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCusolver-windows-x86_64.dll -Durl=file://.
+# mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCublas -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCublas-windows-x86_64.dll -Durl=file://.
+# mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCublas2 -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCublas2-windows-x86_64.dll -Durl=file://.
+# mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCudaDriver -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCudaDriver-windows-x86_64.dll -Durl=file://.
+# mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCudaRuntime -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCudaRuntime-windows-x86_64.dll -Durl=file://.
+# mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCufft -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCufft-windows-x86_64.dll -Durl=file://.
+# mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCurand -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCurand-windows-x86_64.dll -Durl=file://.
+# mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCusparse -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCusparse-windows-x86_64.dll -Durl=file://.
+# mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCusolver -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCusolver-windows-x86_64.dll -Durl=file://.
 # install linux-x86_64 0.6.5 libs
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCublas -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJCublas-linux-x86_64.so -Durl=file://.
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCublas2 -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJCublas2-linux-x86_64.so -Durl=file://.
@@ -85,4 +85,4 @@ mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCusolver -Dversion=$version
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCufft -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCufft-apple-x86_64.dylib -Durl=file://.
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCurand -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCurand-apple-x86_64.dylib -Durl=file://.
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCusparse -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCusparse-apple-x86_64.dylib -Durl=file://.
-# mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCusparse2 -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCusparse2-apple-x86_64.dylib -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCusolver -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCusolver-apple-x86_64.dylib -Durl=file://.
