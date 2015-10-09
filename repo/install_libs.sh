@@ -2,7 +2,7 @@
 # Shell script for adding native libs. Should be used, when new versions of native libs will be released, use with care, probably you don't need to,
 # except you trying to add new native libs
 # # install java jars
-version=0.7.5
+version=0.7.0a
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=jcublas -Dversion=$version -Dfile=jcublas-$version.jar -Durl=file://.
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=jcuda -Dversion=$version -Dfile=jcuda-$version.jar -Durl=file://.
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=jcufft -Dversion=$version -Dfile=jcufft-$version.jar -Durl=file://.
@@ -85,4 +85,13 @@ version=0.7.5
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCufft -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCufft-apple-x86_64.dylib -Durl=file://.
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCurand -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCurand-apple-x86_64.dylib -Durl=file://.
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCusparse -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCusparse-apple-x86_64.dylib -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCusolver -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCusolver-apple-x86_64.dylib -Durl=file://.
+# mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCusolver -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCusolver-apple-x86_64.dylib -Durl=file://.
+# install ppc_64 0.7.0a libs
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCublas -Dversion=$version -Dclassifier=ppc_64 -Dfile=libJCublas-linux-ppc_64.so -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCublas2 -Dversion=$version -Dclassifier=ppc_64 -Dfile=libJCublas2-linux-ppc_64.so -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCudaDriver -Dversion=$version -Dclassifier=ppc_64 -Dfile=libJCudaDriver-linux-ppc_64.so -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCudaRuntime -Dversion=$version -Dclassifier=ppc_64 -Dfile=libJCudaRuntime-linux-ppc_64.so -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCufft -Dversion=$version -Dclassifier=ppc_64 -Dfile=libJCufft-linux-ppc_64.so -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCurand -Dversion=$version -Dclassifier=ppc_64 -Dfile=libJCurand-linux-ppc_64.so -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCusparse -Dversion=$version -Dclassifier=ppc_64 -Dfile=libJCusparse-linux-ppc_64.so -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCusolver -Dversion=$version -Dclassifier=ppc_64 -Dfile=libJCusolver-linux-ppc_64.so -Durl=file://.

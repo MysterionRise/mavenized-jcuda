@@ -5,5 +5,5 @@
   <groupId>jcuda</groupId>
   <artifactId>libJCurand</artifactId>
   <version>0.7.0a</version>
-  <packaging>dylib</packaging>
+  <packaging>so</packaging>
 </project>

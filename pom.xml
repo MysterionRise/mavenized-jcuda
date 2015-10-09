@@ -328,6 +328,83 @@
             </dependencies>
         </profile>
 
+        <!--
+        New profile for JCuda version 0.7.0a for PPC 64
+
+       will work automatically, thanks to auto activation
+        -->
+        <profile>
+            <id>ppc_64</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                    <arch>ppc64</arch>
+                </os>
+            </activation>
+            <properties>
+                <libJ.version>ppc_64</libJ.version>
+            </properties>
+            <!--JCuda native so libs-->
+            <dependencies>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCublas2</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCublas</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCudaDriver</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCudaRuntime</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCufft</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCurand</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCusparse</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJCusolver</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+            </dependencies>
+        </profile>
+
         <!--New profile for JCuda version 0.6.0 for Mac x86_64
 
        will work automatically, thanks to auto activation
