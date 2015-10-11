@@ -334,7 +334,7 @@
        will work automatically, thanks to auto activation
         -->
         <profile>
-            <id>ppc_64</id>
+            <id>ppc64</id>
             <activation>
                 <os>
                     <family>unix</family>
@@ -411,7 +411,7 @@
        will work automatically, thanks to auto activation
         -->
         <profile>
-            <id>ppc_64</id>
+            <id>ppc64le</id>
             <activation>
                 <os>
                     <family>unix</family>
