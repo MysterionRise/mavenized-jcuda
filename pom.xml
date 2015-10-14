@@ -342,7 +342,7 @@
                 </os>
             </activation>
             <properties>
-                <libJ.version>ppc_64</libJ.version>
+                <libJ.version>linux-ppc_64</libJ.version>
             </properties>
             <!--JCuda native so libs-->
             <dependencies>
@@ -419,7 +419,7 @@
                 </os>
             </activation>
             <properties>
-                <libJ.version>ppc_64</libJ.version>
+                <libJ.version>linux-ppc_64</libJ.version>
             </properties>
             <!--JCuda native so libs-->
             <dependencies>
