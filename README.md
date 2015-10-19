@@ -1,18 +1,17 @@
 Mavenized JCuda
 =================
 
-Features:
+#### Features:
 
-* Currently support _JCuda 0.5.0, 0.5.5, 0.6.0RC_ (windows-i386, windows-x86_64), _0.6.0, 0.6.5_ (windows-i386, windows-x86_64, unix-x86_64, mac-x86_64)
- _0.7.0a_ (windows-x86_64, unix-x86_64, mac-x86_64, ppc64, ppc64le), _0.7.5_ (windows-x86_64, unix-x86_64, mac-x86_64)
-* Local Maven repo with different sets of native libs (windows-i386, windows-x86_64, unix-i386, unix-x86_64, mac-x86_64, ppc64, ppc64le)
+* Currently support **JCuda 0.5.0, 0.5.5, 0.6.0RC** (windows-i386, windows-x86_64), **0.6.0, 0.6.5** (windows-i386, windows-x86_64, unix-x86_64, mac-x86_64), **0.7.0a** (windows-x86_64, unix-x86_64, mac-x86_64, ppc64, ppc64le), **0.7.5** (windows-x86_64, unix-x86_64, mac-x86_64)
+* Local Maven repo with different sets of native libs (_windows-i386, windows-x86_64, unix-i386, unix-x86_64, mac-x86_64, ppc64, ppc64le_)
 * Auto detection of OS family name and it's architecture (it's choose needed dependencies automatically)
 * Running any main class, that contained JCuda code easily (without classpath hell, just run Maven goal)
 
-How to run JCuda code:
+#### How to run JCuda code:
 
 * You need to install Cuda (5.0, 5.5, 6.0, 6.5, 7.0, 7.5) for your platform [here] [1]
-* Set property _<jcuda.version>_ in pom.xml to what you really use, e.g. 0.5.0 for Cuda 5.0, etc. (Cuda 6.5 - 0.6.5)
+* Set property **<jcuda.version>** in pom.xml to what you really use, e.g. 0.5.0 for Cuda 5.0, etc. (Cuda 6.5 - 0.6.5)
     * It looks like right now only **0.7.0a or higher** versions are usable due to adding of new library in 0.7.0a **JCuda**
     
     **OBSOLETE** [at least for now]
