@@ -178,7 +178,7 @@
 			                <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
 			                <includes><include>**/*</include></includes>
 			                <repositoryName>mavenized-jcuda</repositoryName>      <!-- github repo name -->
-			                <repositoryOwner>niketanpansare</repositoryOwner>    <!-- github username  -->
+			                <repositoryOwner>MysterionRise</repositoryOwner>    <!-- github username  -->
 			            </configuration>
 			            <executions>
 			              <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
