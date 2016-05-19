@@ -178,7 +178,7 @@
 			                <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
 			                <includes><include>**/*</include></includes>
 			                <repositoryName>mavenized-jcuda</repositoryName>      <!-- github repo name -->
-			                <repositoryOwner>niketanpansare</repositoryOwner>    <!-- github username  -->
+			                <repositoryOwner>MysterionRise</repositoryOwner>    <!-- github username  -->
 			                <merge>true</merge>
 			            </configuration>
 			            <executions>
