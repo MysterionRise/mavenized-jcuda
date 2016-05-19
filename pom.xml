@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.mystic</groupId>
     <artifactId>mavenized-jcuda</artifactId>
-    <version>0.1.2</version>
+    <version>0.7.5b</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Set needed version of JCuda here -->
@@ -178,7 +178,8 @@
 			                <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
 			                <includes><include>**/*</include></includes>
 			                <repositoryName>mavenized-jcuda</repositoryName>      <!-- github repo name -->
-			                <repositoryOwner>MysterionRise</repositoryOwner>    <!-- github username  -->
+			                <repositoryOwner>niketanpansare</repositoryOwner>    <!-- github username  -->
+			                <merge>true</merge>
 			            </configuration>
 			            <executions>
 			              <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
