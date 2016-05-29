@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>jcuda</groupId>
+  <artifactId>JCudnn</artifactId>
+  <versioning>
+    <release>0.7.5b</release>
+    <versions>
+    </versions>
+    <lastUpdated>20160309192129</lastUpdated>
+  </versioning>
+</metadata>
