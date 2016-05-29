@@ -3,11 +3,12 @@
   <groupId>jcuda</groupId>
   <artifactId>libJCusolver</artifactId>
   <versioning>
-    <release>0.7.0a</release>
+    <release>0.7.5b</release>
     <versions>
       <version>0.7.0a</version>
       <version>0.7.5</version>
+      <version>0.7.5b</version>
     </versions>
-    <lastUpdated>20151010165613</lastUpdated>
+    <lastUpdated>20160529193204</lastUpdated>
   </versioning>
 </metadata>

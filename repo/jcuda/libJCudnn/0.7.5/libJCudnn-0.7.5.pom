@@ -5,5 +5,5 @@
   <groupId>jcuda</groupId>
   <artifactId>libJCudnn</artifactId>
   <version>0.7.5</version>
-  <packaging>dylib</packaging>
+  <packaging>so</packaging>
 </project>
