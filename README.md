@@ -16,12 +16,12 @@ Mavenized JCuda
     
     **OBSOLETE** [at least for now]
     
-    * If you run **JCuda 0.6.0RC** and higher on **Windows** platform everything is ok
-    * If you run **JCuda 0.5.5** and lower on **Windows** or **Unix** platform - you should set profile manually by adding *-P windows-x86_64_old*
-        or *-P windows-x86_old* or *-P unix-x86_64_old*, etc. to _mvn clean package_ command, depends on architecture you use.
-        For more info about **Maven** profiles take a look [here] [2]
-    * If you run **JCuda 0.6.0** and higher on **Unix x86_64** platform - everything is ok
-    * If you run **JCUda 0.6.0** and higher on **Mac x86_64** - everything is ok
+    * ~~If you run **JCuda 0.6.0RC** and higher on **Windows** platform everything is ok~~
+    * ~~If you run **JCuda 0.5.5** and lower on **Windows** or **Unix** platform - you should set profile manually by adding *-P windows-x86_64_old*
+        or *-P windows-x86_old* or *-P unix-x86_64_old*, etc. to _mvn clean package_ command, depends on architecture you use.~~
+        ~~For more info about **Maven** profiles take a look [here] [2]~~
+    * ~~If you run **JCuda 0.6.0** and higher on **Unix x86_64** platform - everything is ok~~
+    * ~~If you run **JCUda 0.6.0** and higher on **Mac x86_64** - everything is ok~~
     
     **OBSOLETE** [end of obsolete part]
        
