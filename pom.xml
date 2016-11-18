@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.mystic</groupId>
     <artifactId>mavenized-jcuda</artifactId>
-    <version>0.7.5b</version>
+    <version>0.8.0</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Set needed version of JCuda here -->
-        <jcuda.version>0.7.5b</jcuda.version>
+        <jcuda.version>0.8.0</jcuda.version>
         <!-- Set needed version of JCudnn here -->
-        <jcudnn.version>0.7.5</jcudnn.version>
+        <jcudnn.version>0.8.0</jcudnn.version>
         <github.global.server>github</github.global.server>
     </properties>
     <dependencies>
@@ -48,6 +48,11 @@
         <dependency>
             <groupId>jcuda</groupId>
             <artifactId>jcusolver</artifactId>
+            <version>${jcuda.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jcuda</groupId>
+            <artifactId>jnvgraph</artifactId>
             <version>${jcuda.version}</version>
         </dependency>
     </dependencies>
@@ -426,6 +431,14 @@
                     <classifier>${libJ.version}</classifier>
                     <type>so</type>
                 </dependency>
+                <dependency>
+                    <groupId>jcuda</groupId>
+                    <artifactId>libJNvgraph</artifactId>
+                    <version>${jcuda.version}</version>
+                    <classifier>${libJ.version}</classifier>
+                    <type>so</type>
+                </dependency>
+
             </dependencies>
         </profile>
 
