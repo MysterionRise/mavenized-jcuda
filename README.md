@@ -1,6 +1,12 @@
 Mavenized JCuda
 =================
 
+#### What it is:
+
+JCuda is the Java bindings for [NVIDIA® CUDA™][4] and related libraries.
+
+To use these libraries, you need a CUDA-enabled GPU device and the NVIDIA driver with CUDA support and the CUDA Toolkit from the NVIDIA website. The aim of this project is to simplify development and usage of JCuda wrapper without issues of managing dependencies by yourself (different versions, different OS, different architecture, classpath hell)
+
 #### Features:
 
 * Currently support **JCuda 0.5.0, 0.5.5, 0.6.0RC** (windows-i386, windows-x86_64), **0.6.0, 0.6.5** (windows-i386, windows-x86_64, unix-x86_64, mac-x86_64), **0.7.0a** (windows-x86_64, unix-x86_64, mac-x86_64, ppc64, ppc64le), **0.7.5** (windows-x86_64, unix-x86_64, mac-x86_64), **0.7.5b** (windows-x86_64, unix-x86_64, ppc64, ppc64le), **0.8.0** (unix-x86_64)
@@ -37,3 +43,4 @@ Mavenized JCuda
 [1]: https://developer.nvidia.com/cuda-downloads "here"
 [2]: http://maven.apache.org/guides/introduction/introduction-to-profiles.html "here"
 [3]: http://stackoverflow.com/q/28333226/2663985
+[4]: http://www.nvidia.com/object/cuda_home_new.html "NVIDIA® CUDA™"
