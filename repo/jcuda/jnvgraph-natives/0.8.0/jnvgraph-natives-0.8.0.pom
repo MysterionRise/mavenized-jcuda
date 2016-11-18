@@ -3,7 +3,6 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>jcuda</groupId>
-  <artifactId>libJNvgraph</artifactId>
+  <artifactId>jnvgraph-natives</artifactId>
   <version>0.8.0</version>
-  <packaging>so</packaging>
 </project>
