@@ -23,16 +23,14 @@ mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=jcudnn -Dversion=$version -D
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCusolver -Dversion=$version -Dclassifier=windows-x86_64 -Dfile=JCusolver-windows-x86_64.dll -Durl=file://.
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=JCudnn -Dversion=$cudnn_version -Dclassifier=windows-x86_64 -Dfile=JCudnn-windows-x86_64.dll -Durl=file://.
 # # install linux-x86_64 libs
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCublas -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJCublas-$version-linux-x86_64.so -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCublas2 -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJCublas2-$version-linux-x86_64.so -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCudaDriver -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJCudaDriver-$version-linux-x86_64.so -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCudaRuntime -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJCudaRuntime-$version-linux-x86_64.so -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCufft -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJCufft-$version-linux-x86_64.so -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCurand -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJCurand-$version-linux-x86_64.so -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCusparse -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJCusparse-$version-linux-x86_64.so -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCusolver -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJCusolver-$version-linux-x86_64.so -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCudnn -Dversion=$cudnn_version -Dclassifier=linux-x86_64 -Dfile=libJCudnn-$version-linux-x86_64.so -Durl=file://.
-mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJNvgraph -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=libJNvrtc-$version-linux-x86_64.so -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=jcublas-natives -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=jcublas-natives-$version-linux-x86_64.jar -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=jcuda-natives -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=jcuda-natives-$version-linux-x86_64.jar -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=jcufft-natives -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=jcufft-natives-$version-linux-x86_64.jar -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=jcurand-natives -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=jcurand-natives-$version-linux-x86_64.jar -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=jcusparse-natives -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=jcusparse-natives-$version-linux-x86_64.jar -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=jcusolver-natives -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=jcusolver-natives-$version-linux-x86_64.jar -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=jcudnn-natives -Dversion=$version -Dclassifier=linux-x86_64 -Dfile=jcudnn-natives-$version-linux-x86_64.jar -Durl=file://.
+mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=jnvgraph-natives -Dversion=$cudnn_version -Dclassifier=linux-x86_64 -Dfile=jnvgraph-natives-$version-linux-x86_64.jar -Durl=file://.
 # install apple-x86_64
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCublas -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCublas-apple-x86_64.dylib -Durl=file://.
 # mvn deploy:deploy-file -DgroupId=jcuda -DartifactId=libJCublas2 -Dversion=$version -Dclassifier=apple-x86_64 -Dfile=libJCublas2-apple-x86_64.dylib -Durl=file://.

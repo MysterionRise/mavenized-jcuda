@@ -1,0 +1,11 @@
+./libJCublas
+./libJCublas2
+./libJCudaDriver
+./libJCudaRuntime
+./libJCudnn
+./libJCufft
+./libJCurand
+./libJCusolver
+./libJCusparse
+./libJCusparse2
+./libJNvgraph
