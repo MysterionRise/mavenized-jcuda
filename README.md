@@ -9,7 +9,7 @@ To use these libraries, you need a CUDA-enabled GPU device and the NVIDIA driver
 
 #### Features:
 
-* Currently support **JCuda 0.5.0, 0.5.5, 0.6.0RC** (windows-i386, windows-x86_64), **0.6.0, 0.6.5** (windows-i386, windows-x86_64, unix-x86_64, mac-x86_64), **0.7.0a** (windows-x86_64, unix-x86_64, mac-x86_64, ppc64, ppc64le), **0.7.5** (windows-x86_64, unix-x86_64, mac-x86_64), **0.7.5b** (windows-x86_64, unix-x86_64, ppc64, ppc64le), **0.8.0** (unix-x86_64)
+* Currently support **JCuda 0.5.0, 0.5.5, 0.6.0RC** (windows-i386, windows-x86_64), **0.6.0, 0.6.5** (windows-i386, windows-x86_64, unix-x86_64, mac-x86_64), **0.7.0a** (windows-x86_64, unix-x86_64, mac-x86_64, ppc64, ppc64le), **0.7.5** (windows-x86_64, unix-x86_64, mac-x86_64), **0.7.5b** (windows-x86_64, unix-x86_64, ppc64, ppc64le), **0.8.0** (unix-x86_64, ppc64le)
 * Local Maven repo with different sets of native libs (_windows-i386, windows-x86_64, unix-i386, unix-x86_64, mac-x86_64, ppc64, ppc64le_)
 * Auto detection of OS family name and it's architecture (it's choose needed dependencies automatically)
 * Running any main class, that contained JCuda code easily (without classpath hell, just run Maven goal)
