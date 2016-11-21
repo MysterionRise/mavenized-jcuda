@@ -16,9 +16,9 @@ To use these libraries, you need a CUDA-enabled GPU device and the NVIDIA driver
 
 #### How to run JCuda code:
 
-* You need to install Cuda (5.0, 5.5, 6.0, 6.5, 7.0, 7.5) for your platform [here] [1]
+* You need to install Cuda (5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0) for your platform [here] [1]
 * Set property **<jcuda.version>** in pom.xml to what you really use, e.g. 0.5.0 for Cuda 5.0, etc. (Cuda 6.5 - 0.6.5)
-    * It looks like right now only **0.7.0a or higher** versions are usable due to adding of new library in 0.7.0a **JCuda**
+    * It looks like right now only **0.8.0 or higher** versions are usable due to adding of new library in 0.8.0 **JCuda**
     
     **OBSOLETE** [at least for now]
     
