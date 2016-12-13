@@ -1,4 +1,4 @@
-Mavenized JCuda ![Build Status](https://travis-ci.org/MysterionRise/mavenized-jcuda.svg?branch=master)
+Mavenized JCuda [![Build Status](https://travis-ci.org/MysterionRise/mavenized-jcuda.svg?branch=master)](https://travis-ci.org/MysterionRise/mavenized-jcuda)
 =================
 
 #### What it is:
