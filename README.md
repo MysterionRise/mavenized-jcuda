@@ -54,6 +54,8 @@ Starting with version **0.8.0**, all JCuda libraries are available in **Maven** 
 </dependency>
 ```
 
+For more information take a look at http://jcuda.org/downloads/downloads.html
+
 #### Features:
 
 * Currently support **JCuda 0.5.0, 0.5.5, 0.6.0RC** (windows-i386, windows-x86_64), **0.6.0, 0.6.5** (windows-i386, windows-x86_64, unix-x86_64, mac-x86_64), **0.7.0a** (windows-x86_64, unix-x86_64, mac-x86_64, ppc64, ppc64le), **0.7.5** (windows-x86_64, unix-x86_64, mac-x86_64), **0.7.5b** (windows-x86_64, unix-x86_64, ppc64, ppc64le), **0.8.0** (unix-x86_64, ppc64le, apple-x86_64)
