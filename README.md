@@ -7,6 +7,53 @@ JCuda is the Java bindings for [NVIDIA® CUDA™][4] and related libraries.
 
 To use these libraries, you need a CUDA-enabled GPU device and the NVIDIA driver with CUDA support and the CUDA Toolkit from the NVIDIA website. The aim of this project is to simplify development and usage of JCuda wrapper without issues of managing dependencies by yourself (different versions, different OS, different architecture, classpath hell)
 
+#### JCuda 0.8.0
+
+Starting with version **0.8.0**, all JCuda libraries are available in **Maven** central. The following are the dependencies for the individual libraries:
+
+```
+<dependency>
+    <groupId>org.jcuda</groupId>
+    <artifactId>jcuda</artifactId>
+    <version>0.8.0</version>
+</dependency>
+<dependency>
+    <groupId>org.jcuda</groupId>
+    <artifactId>jcublas</artifactId>
+    <version>0.8.0</version>
+</dependency>
+<dependency>
+    <groupId>org.jcuda</groupId>
+    <artifactId>jcufft</artifactId>
+    <version>0.8.0</version>
+</dependency>
+<dependency>
+    <groupId>org.jcuda</groupId>
+    <artifactId>jcusparse</artifactId>
+    <version>0.8.0</version>
+</dependency>
+<dependency>
+    <groupId>org.jcuda</groupId>
+    <artifactId>jcusolver</artifactId>
+    <version>0.8.0</version>
+</dependency>
+<dependency>
+    <groupId>org.jcuda</groupId>
+    <artifactId>jcurand</artifactId>
+    <version>0.8.0</version>
+</dependency>
+<dependency>
+    <groupId>org.jcuda</groupId>
+    <artifactId>jnvgraph</artifactId>
+    <version>0.8.0</version>
+</dependency>
+<dependency>
+    <groupId>org.jcuda</groupId>
+    <artifactId>jcudnn</artifactId>
+    <version>0.8.0</version>
+</dependency>
+```
+
 #### Features:
 
 * Currently support **JCuda 0.5.0, 0.5.5, 0.6.0RC** (windows-i386, windows-x86_64), **0.6.0, 0.6.5** (windows-i386, windows-x86_64, unix-x86_64, mac-x86_64), **0.7.0a** (windows-x86_64, unix-x86_64, mac-x86_64, ppc64, ppc64le), **0.7.5** (windows-x86_64, unix-x86_64, mac-x86_64), **0.7.5b** (windows-x86_64, unix-x86_64, ppc64, ppc64le), **0.8.0** (unix-x86_64, ppc64le, apple-x86_64)
