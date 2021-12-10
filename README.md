@@ -1,58 +1,22 @@
-Mavenized JCuda [![Build Status](https://travis-ci.org/MysterionRise/mavenized-jcuda.svg?branch=master)](https://travis-ci.org/MysterionRise/mavenized-jcuda)
+Mavenized JCuda
 =================
+
+# PLEASE USER VERSION AVAILABLE IN MAVEN CENTRAL
+
+```
+<dependency>
+    <groupId>org.jcuda</groupId>
+    <artifactId>jcuda</artifactId>
+    <version>11.4.1</version>
+</dependency>
+
+```
 
 #### What it is:
 
 JCuda is the Java bindings for [NVIDIA® CUDA™][4] and related libraries.
 
 To use these libraries, you need a CUDA-enabled GPU device and the NVIDIA driver with CUDA support and the CUDA Toolkit from the NVIDIA website. The aim of this project is to simplify development and usage of JCuda wrapper without issues of managing dependencies by yourself (different versions, different OS, different architecture, classpath hell)
-
-#### JCuda 0.8.0
-
-Starting with version **0.8.0**, all JCuda libraries are available in **Maven** central. The following are the dependencies for the individual libraries:
-
-```
-<dependency>
-    <groupId>org.jcuda</groupId>
-    <artifactId>jcuda</artifactId>
-    <version>0.8.0</version>
-</dependency>
-<dependency>
-    <groupId>org.jcuda</groupId>
-    <artifactId>jcublas</artifactId>
-    <version>0.8.0</version>
-</dependency>
-<dependency>
-    <groupId>org.jcuda</groupId>
-    <artifactId>jcufft</artifactId>
-    <version>0.8.0</version>
-</dependency>
-<dependency>
-    <groupId>org.jcuda</groupId>
-    <artifactId>jcusparse</artifactId>
-    <version>0.8.0</version>
-</dependency>
-<dependency>
-    <groupId>org.jcuda</groupId>
-    <artifactId>jcusolver</artifactId>
-    <version>0.8.0</version>
-</dependency>
-<dependency>
-    <groupId>org.jcuda</groupId>
-    <artifactId>jcurand</artifactId>
-    <version>0.8.0</version>
-</dependency>
-<dependency>
-    <groupId>org.jcuda</groupId>
-    <artifactId>jnvgraph</artifactId>
-    <version>0.8.0</version>
-</dependency>
-<dependency>
-    <groupId>org.jcuda</groupId>
-    <artifactId>jcudnn</artifactId>
-    <version>0.8.0</version>
-</dependency>
-```
 
 For more information take a look at http://jcuda.org/downloads/downloads.html
 
